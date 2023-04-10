@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #my-canvas{
+      width:400px;
+      height:300px;
+      background-color: lightblue;
+    }
+  </style>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+      $(function(){    //mousemove발생시~ 콜백함수 실행~
+        $(document).on("mousemove",function(e){//이벤트 객체 정보 받음
+            $(".posX").text(e.pageX)//이벤트 객체에서 X위치
+            $(".posY").text(e.pageY)//이벤트 객체에서 Y위치
+
+            $(".off_posX").text(e.offsetX)//특정 객체의 X위치
+            $(".off_posY").text(e.offsetY)//특정 객체의 Y위치
+        })
+      })
+  </script>
+</head>
+<body>
+    <h1>mousemove</h1>
+    <p>page X:<span class="posX">0</span>px</p>
+    <p>page Y:<span class="posY">0</span>px</p>
+    <p>canvas X:<span class="off_posX">0</span>px</p>
+    <p>canvas Y:<span class="off_posY">0</span>px</p>
+    <canvas id="my-canvas"></canvas>
+</body>
+</html>

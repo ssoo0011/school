@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            height: 300px;
+            width: 100px;
+            background-color: palevioletred;
+            text-align: center;
+            padding-left: 17px;
+            padding-top: 25px;
+            box-sizing: border-box;
+        }
+        #box{
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            text-align: center;
+            margin: 5px;
+            font-size: 20px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            background-color: khaki;
+            border: none;
+            position: relative;
+            right: 12px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function myFunc(){
+            var myinput = document.getElementById("my-input")
+            myinput.value = "정소영"
+            //input 속성값 김대리로 변경
+
+        }        
+        function myFunc2(){
+            var myinput = document.getElementById("my-input")
+            alert(myinput.value)
+
+        }
+    </script>
+</head>
+<body>
+
+        <input type = "text" id ="my-input">
+
+        </input>
+
+        <button onclick="myFunc()">클릭</button>
+        <button onclick="myFunc2()">조회</button>
+
+
+</body>
+</html>

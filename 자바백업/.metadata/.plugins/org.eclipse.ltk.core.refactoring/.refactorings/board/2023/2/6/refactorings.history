@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 4 elements to &apos;board/src/board&apos;&#x0D;&#x0A;- Original project: &apos;board&apos;&#x0D;&#x0A;- Destination element: &apos;board/src/board&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     BoardMain.java&#x0D;&#x0A;     JdbcUtil.java&#x0D;&#x0A;     BoardSVC.java&#x0D;&#x0A;     BoardVO.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;board" element1="/src&lt;{BoardMain.java" element2="/src&lt;{JdbcUtil.java" element3="/src&lt;{BoardSVC.java" element4="/src&lt;{BoardVO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1675835666934" units="4" version="1.0"/>
+</session>

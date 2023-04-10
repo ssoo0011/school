@@ -1,0 +1,146 @@
+/*메뉴 이미지 영역*/
+#menu-img>img{
+  display: block;
+  width:300px;
+  height:300px;
+  border-radius: 10px;
+  margin:0 auto;
+}
+#menu-img>h1{
+  text-align: center;
+  font-size:20px;
+  font-weight: bold;
+}
+#menu-img>#name{
+  box-shadow: 5px 5px  10px #767872;
+}
+
+#menu-img>#name>#menu-name{
+  font-size: 30px;
+  padding-top: 25px;
+  box-sizing: border-box;
+}
+#menu-img>#name>#menu-con{
+  width: 550px;
+  height: 65px;
+  background-color: white;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #161f00;
+}
+/*메뉴 기본 선택*/
+#main-menu-choice>h1{
+  padding-left:30px;
+  height: 50px;
+  box-sizing: border-box;
+  font-size:27px;
+  font-weight: bold;
+  margin-top: 80px;
+}
+#main-menu-choice>#main-menu-01{
+  width:100%;
+  height:50px;
+  background-color: white;
+}
+#main-menu-choice>#main-menu-02{
+  width:100%;
+  height:50px;
+  background-color: white;
+}
+#main-menu-choice>div{
+  padding:10px 20px;
+  box-sizing: border-box;
+  font-size:20px;
+}
+#main-menu-choice>div>span:nth-child(2){
+  margin-right:350px;
+}
+/*메뉴 사이드 선택*/
+#side-menu-choice>h1{
+  height: 50px;
+  padding-left:30px;
+  box-sizing: border-box;
+  font-size:27px;
+  font-weight: bold;
+}
+#side-menu-choice>#side-menu-01{
+  width:100%;
+  height:50px;
+  background-color: white;
+}
+#side-menu-choice>#side-menu-02{
+  width:100%;
+  height:50px;
+  background-color: white;
+}
+#side-menu-choice>#side-menu-03{
+  width:100%;
+  height:50px;
+  background-color: white;
+}
+#side-menu-choice>div{
+  padding:10px 20px;
+  box-sizing: border-box;
+  font-size:20px;
+}
+#side-menu-choice>div>span:nth-child(2){
+  margin-right:320px;
+}
+
+/*메뉴 갯수 변경*/
+#item-count-change>#item-change{
+  width:90%;
+  height:50px;
+  background-color: white;
+}
+#item-change>span{
+  float:left;
+  width:90px;
+  height:50px;
+  background-color: white;
+  font-size: 27px;
+  padding-top: 9px;
+  box-sizing: border-box;
+  position: relative;
+  left: 190px;
+}
+#item-change>#item-inc-dec{
+  float:right;
+  width:170px;
+  height:50px;
+  background-color: white;
+  border: #767872;
+  position: relative;
+  right: 110px;
+}
+#item-change>#item-inc-dec>button{
+  width:50px;
+  height:50px;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: bolder;
+  border: none;
+
+}
+
+#item-count-change>#item-price-info{
+  width:100%;
+  height:50px;
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+}
+#confirm-btn{
+  width: 600px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 8px;
+  background-color: #2ac0b7;
+  border-style: none;
+  color: white;
+  margin-top: -20px;
+}
+

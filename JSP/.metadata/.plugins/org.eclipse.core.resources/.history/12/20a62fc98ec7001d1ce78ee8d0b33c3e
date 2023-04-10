@@ -1,0 +1,31 @@
+package Controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Board.BoardDAO;
+import Board.BoardDTO;
+
+@WebServlet("/MVCBoard/write.do")
+public class WriteController extends HttpServlet {
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException{
+			
+		BoardDAO dao = new BoardDAO();
+		
+		String title = req.getParameter("title");
+		String name = req.getParameter("name");
+		System.out.println(name);
+		req.getRequestDispatcher("/MVCBoard/Write.jsp").forward(req,  resp);
+		
+		dao.close();
+	}
+}

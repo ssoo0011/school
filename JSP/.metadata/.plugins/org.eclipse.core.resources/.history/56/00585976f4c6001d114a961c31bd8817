@@ -1,0 +1,48 @@
+package DBCon;
+
+import java.util.List;
+import java.util.Vector;
+
+import Board.BoardDTO;
+import common.JDBConnect;
+
+public class BoardDAO extends JDBConnect{
+	
+	List<BoardDTO> bList = new Vector<BoardDTO>();
+	
+	//목록 보여주기
+	public List<BoardDTO> ShowList(){ 
+		String query = "SELECT * FROM BOARD";
+		
+		try {
+			pstmt = con.prepareStatement(query);
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				BoardDTO dto = new BoardDTO();
+				
+				dto.setIdx(rs.getInt(1));
+				dto.setName(rs.getString(2));
+				dto.setTitle(rs.getString(3));
+				dto.setCate(rs.getString(4));
+				dto.setContent(rs.getString(5));
+				dto.setPostdate(rs.getDate(6));
+				dto.setOfile(rs.getString(7));
+				dto.setSfile(rs.getString(8));
+				dto.setDowncount(rs.getInt(9));
+				dto.setPass(rs.getString(10));
+				dto.setVisitcount(rs.getInt(11));
+				
+				bList.add(dto);
+			}
+			
+		}catch (Exception e) {
+			System.out.println("리스트 못불러옴");
+			e.printStackTrace();
+		}
+		return bList;
+	}
+	
+	
+	
+}

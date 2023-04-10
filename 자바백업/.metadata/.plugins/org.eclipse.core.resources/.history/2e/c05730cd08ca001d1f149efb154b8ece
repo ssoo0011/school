@@ -1,0 +1,32 @@
+package script;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/MVCBoard/write.do")
+public class Script extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException{
+			
+		req.setCharacterEncoding("utf-8");
+		resp.setCharacterEncoding("EUC-KR");
+	     PrintWriter writer = resp.getWriter();
+	     writer.println("<script type='text/javascript'>");
+	     writer.println("alert('해당 파일이 존재하지 않습니다.');");
+	     writer.println("history.back();");
+	     writer.println("</script>");
+	     writer.flush();
+	     return;
+		req.getRequestDispatcher("/Script.jsp").forward(req,  resp);
+
+	}
+
+}

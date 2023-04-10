@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        function myFunc(){
+            // var mysrc = $('#my-img').attr('src', '../사진/애옹쓰.jpg')
+            var mysrc = $('#my-img').attr('src')
+            alert(mysrc)
+        }
+        function myFunc2(){
+            var src = '../사진/댕댕쓰.jpg' 
+            if(src === $('#my-img').attr('src')){
+                var mysrc2 = $('#my-img').attr('src', '../사진/애옹쓰.jpg')
+            }else {
+                var mysrc2 = $('#my-img').attr('src', '../사진/댕댕쓰.jpg')
+            }
+           
+
+        }
+
+    </script>
+</head>
+<body>  
+    <img src = '../사진/댕댕쓰.jpg' id = 'my-img'>
+    <button onclick="myFunc()">클릭!</button>
+    <button onclick="myFunc2()">병경!!</button>
+
+
+</body>
+</html>

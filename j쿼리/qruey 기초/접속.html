@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){ //ready 역할
+            // $("*").css("border", "1px solid blue")
+            // $("#tit").css("background-color", "#ff0")
+            // .css("border", "2px solid #f00")
+            //이거를
+            //이렇게 묶어서도 가능, 이게 더 컴터한테도 좋고 ㄴ나한테도 좋음
+            //JSON배열 형식으로 보내줌
+            // $("*").css({
+            //     "background-color": "#ff0",
+            //     "border" :  "2px solid #f00"
+            // })
+
+            $(function(){
+            $("h2").css("background-color", "#ff0")
+            .css("border", "2px solid #f00")
+            })
+
+            $(function(){
+            $("h2.tit").css("background-color", "blue")
+            .css("border", "2px solid #f00")
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <h1>정소영</h1>
+    <h2>안녕</h2>
+    <h3>메롱</h3>
+
+    <h1>정소영</h1>
+    <h2 class="tit">안녕</h2>
+    <h3 class="tit">메롱</h3>
+</body>
+</html>

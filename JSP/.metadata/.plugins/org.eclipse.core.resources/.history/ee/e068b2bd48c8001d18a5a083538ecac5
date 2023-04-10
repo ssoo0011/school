@@ -1,0 +1,45 @@
+package Controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Board.BoardDAO;
+import Board.BoardDTO;
+
+@WebServlet("/MVCBoard/pass.do")
+public class PassController extends HttpServlet{
+	
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException{
+			
+		BoardDAO dao = new BoardDAO();
+		String mode = req.getParameter("mode");
+		String idx = req.getParameter("idx");
+		
+		EditController ec = new EditController();
+		List<BoardDTO> bList = dao.ShowCont(req, idx);
+		req.setAttribute("List", bList);
+		
+		switch (mode) {
+			
+		case "edit":
+			ec.doPost(req, resp);
+			break;
+			
+		case "delete":
+			
+			req.getRequestDispatcher("/MVCBoard/List.jsp").forward(req,  resp);
+			
+		default:
+			break;
+		}
+		
+		dao.close();
+	}
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = prompt("숫자1 입력")
+        var num2 = prompt("숫자2 입력")
+        num1 = parseInt(num1)
+        num2 = parseInt(num2)
+        var sum = 0;
+
+        function frandly(a, b){
+            for (var i = 0; i < a; i++) {
+                 if(a % i === 0){
+                    sum += i
+                    document.write (sum, "<br>")
+                 }
+            }
+            if(sum === b){
+                        return a + "과(와)"+b +"는 친화수입니다."
+                    }else{
+                        return a + "과(와)"+b +"는 친화수가 아닙니다."
+                    }
+        }
+
+        var result = frandly(num1, num2)
+        document.write(result)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

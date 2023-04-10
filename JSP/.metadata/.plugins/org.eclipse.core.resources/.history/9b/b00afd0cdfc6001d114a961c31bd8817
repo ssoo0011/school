@@ -1,0 +1,19 @@
+package Board;
+
+public class BoardDTO {
+
+	private int idx;
+	private String name;
+	private String title;
+	private String cate;
+	private String content;
+	private java.sql.Date postdate;
+	private String name;
+	private String name;
+	private String name;
+	private String name;
+	private String name;
+	private String name;
+	private String name;
+	
+}

@@ -1,0 +1,15 @@
+package Controller;
+
+import javax.servlet.http.HttpServlet;
+
+import org.apache.tomcat.util.http.fileupload.FileUpload;
+
+import com.oreilly.servlet.MultipartRequest;
+
+import Board.BoardDTO;
+import fileupload.FileUtil;
+
+
+public class DownloadController extends HttpServlet{
+	
+}

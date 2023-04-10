@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #tab{
+        width: 480px;
+        height: 200px;
+        background-color: paleturquoise;
+    }
+
+    #tab-btn{
+        width: 480px;
+        height: 50px;
+        background-color: whitesmoke;
+
+    }
+    #tab-btn>a{
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        background-color: #8f9efb;
+        text-decoration: none;
+        padding-top: 8px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    #tab-contents{
+        width: 480px;
+        height: 150px;
+        background-color: #f8ddf6;
+    }
+    #tab-contents>#notice{
+        width: 475px;
+        height: 145px;
+        background-color: #fffbf4;
+
+    }
+    #tab-contents>#gallery{
+        width: 475px;
+        height: 145px;
+        background-color: #fffbf4;
+        display: none; /*일단 하나만 보여주기 위해 숨기기*/
+    }
+
+</style>
+<body>
+    <div id = "tab">
+        <div id = "tab-btn">
+            <a href="#">공지사항</a>
+            <a href="#">갤러리</a>
+        </div>
+        <div id = "tab-contents">
+            <div id = "notice">
+                공지사항
+            </div>
+            <div id = "gallery">
+                갤러리
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+*{
+    margin: auto;
+    font-family: 'NanumSquareNeo-Variable';
+}
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 15xp;
+}
+span{
+	float : left;
+}
+a:hover{
+	text-decoration: none;
+    color: black;
+    font-size: 15xp;
+}
+hr{
+    height: 1px;
+
+}
+#nav-bar{
+    width: 100%;
+    height: 70px;
+    background-color: pink;
+}
+#page-menu{
+    width: 70%;
+    height: 70px;
+    background-color: #ff8489;
+    float: left;
+    padding-top: 19px;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+#page-menu > a{
+    margin-left: 10px;
+}
+#member-menu{
+    width: 30%;
+    height: 70px;
+    background-color: #ff8489;
+    float: left;
+    padding-top: 19px;
+    box-sizing: border-box;
+    font-size : 15px;
+    padding-right: 13px;
+    box-sizing: border-box;
+}
+#member-menu > a{
+    float: right;
+    margin-right: 15px;
+}
+#title{
+    padding-left: 200px;
+    padding-top: 85px;
+    font-size: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 260px;
+    background-color: aliceblue;
+    margin-bottom : 20px;
+    position : static;
+}
+#content{
+    text-align: center ;
+}
+#LogInId{
+	float : left;
+}
+#memberSVC{
+	float : left;
+}

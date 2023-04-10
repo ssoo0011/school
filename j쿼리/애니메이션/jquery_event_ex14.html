@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      /*body크기 늘려서 수평,수직 스크롤 생기게*/
+      width:5000px;
+      height:100000px;
+    }
+    #wrap{
+      width:200px;
+      height:200px;
+      position: fixed;
+      background-color: aqua;
+    }
+  </style>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+      $(window).on("scroll",function(){
+            var sc_top = $(this).scrollTop()
+            var sc_left = $(this).scrollLeft()
+            $(".top").text(sc_top)
+            $(".left").text(sc_left)
+      })
+  </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>scrollTop:<span class="top">0</span>px</p>
+        <p>scrollLeft:<span class="left">0</span>px</p>
+    </div>
+</body>
+</html>

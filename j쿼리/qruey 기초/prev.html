@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>    
+        $(function(){
+            var style_1 = {
+                "background-color" : "#0ff",
+                "border" : "2px solid #f00"
+            }
+            var style_2 = {
+                "background-color" : "#ff0",
+                "border" : "2px dashed #f00"
+            }
+
+            // $(".txt").prev().css(style_1) //이전 요소 하나만
+            // $(".txt").prev().css(style_1) //이전 요소 전부 다
+            $(".txt").prevUntil(".point").css(style_1) //~ 까지
+            
+
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접관계 선택자</h1>
+        <p>내용1</p>
+        <p>내용5</p>
+        <p class="point">point</p>
+        <p>내용7</p>
+        <p>내용8</p>
+        <p>내용9</p>
+        <p>내용0</p>
+        <p class = "txt">txt</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>

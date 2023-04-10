@@ -1,0 +1,39 @@
+
+#home{
+    background-color: black;
+    height: 70px;
+    width: 1080px;
+    color: white;
+    font-size: 25px;
+    padding-left: 40px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    font-size: 80px;
+    margin-left: 38px; 
+}
+#sale{
+    width: 1080px;
+    height: 800px;
+}
+.name{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.product {
+    float: left;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.price{
+    font-size: 20px;
+    margin-top: 20px;
+}
+

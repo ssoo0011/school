@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/detail.css" type="text/css">
+    <link href='https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KyoboHandwriting2021sjy.woff2' rel="stylesheet">
+    <script src="./js/app.js"></script>
+    <title>메뉴선택</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="menu-img">
+            <img src="./images/cheese-topokki.jpg" alt="치즈떡볶이">
+            <div id = "name">
+                <div id = "menu-name">치즈떡볶이</div>
+                <div id = "menu-con">매콤달달~ 마싱ㅆ는 떵뽀기! <br> 대표메뉴!</div>
+            </div>
+        </div>
+        <div id="main-menu-choice">
+            <h1>가격</h1>
+            <div id="main-menu-01">
+                <input type="radio" name="main-menu" 
+                class="main-menu" value="5000" checked>
+                <span>1인분</span>
+                <span>5,000원</span>
+            </div>
+            <div id="main-menu-02">
+                <input type="radio" name="main-menu" 
+                class="main-menu" value="9000">
+                <span>2인분</span>
+                <span>9,000원</span>
+            </div>
+        </div>
+        <hr>
+        <div id="side-menu-choice">
+            <h1>추가메뉴</h1>
+            <div id="side-menu-01">
+                <input type="checkbox" name="side-menu"
+                class="side-menu" value="4000">
+                <span>모듬튀김</span>
+                <span>+4,000원</span>
+            </div>
+            <div id="side-menu-02">
+                <input type="checkbox" name="side-menu"
+                class="side-menu" value="3500">
+                <span>순대1인분</span>
+                <span>+3,500원</span>
+            </div>
+            <div id="side-menu-03">
+                <input type="checkbox" name="side-menu"
+                class="side-menu" value="3000">
+                <span>꼬마김밥</span>
+                <span>+3,000원</span>
+            </div>
+        </div>
+        <div id="item-count-change">
+            <div id="item-change">
+                <span>수량</span>
+                <div id="item-inc-dec">
+                    <button id="dec-btn">-</button>
+                    <span id="item-count">1</span>
+                    <button id="inc-btn">+</button>
+                </div>
+            </div>
+            <div id="item-price-info">
+                
+            </div>
+            <button id="confirm-btn">총
+                <span id="total-price-count">5000</span>원
+            </button>
+            
+        </div>
+    </div>
+</body>
+
+</html>

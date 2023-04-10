@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: #f6a3b6;
+        }
+
+    </style>
+    <script>
+        function myFunc(){
+            // var myTxt = $('#box').width('200').height('500')
+            // .css('background-color', 'pink')
+
+            var curWidth = $('#box').width()
+            curWidth +=100
+            $('#box').width('+=100').css('background-color', '#f6a3b6')
+            //100씩 늘어남 ㄷㄷ
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id = "box">빡쓰!</div>
+    <button onclick="myFunc()">콜릭!</button>
+    <button onclick="myFunc2()">변경!!</button>
+</body>
+</html>

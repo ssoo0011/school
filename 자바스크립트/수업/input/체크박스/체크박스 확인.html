@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function myFunc(){
+            var myCheck = document.getElementsByClassName("mycheck")
+            //클래스 이름으로 원소들 !들고오기
+            console.log(myCheck[0].checked)
+            console.log(myCheck[1].checked)
+            console.log(myCheck[2].checked)
+
+
+        }
+    </script>
+</head>
+<body>
+
+    <input type="checkbox" class="mycheck"/>
+    <input type="checkbox" class="mycheck"/>
+    <input type="checkbox" class="mycheck"/>
+    <button onclick="myFunc()">클릭</button>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+package Controller;
+
+import javax.servlet.http.HttpServlet;
+
+
+public class DownloadController{
+	
+	String saveDirectory = application.getRealPath("/Uploads");
+	int maxPostSize = 1024*1000;
+	String encoding = "UTF-8";
+}

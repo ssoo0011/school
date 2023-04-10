@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){
+            //같은
+            $("#menu li").eq(2)
+            .css("background-color", "skyblue")
+            .css("margin-top", "10px")
+
+            //이상? 초과?
+            $("#menu li:gt(2)")
+            .css("background-color", "pink")
+            .css("margin-top", "10px")
+
+            //미만
+            $("#menu li:lt(2)")
+            .css("background-color", "purple")
+            .css("margin-top", "10px")
+
+        })
+
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu" type = "square">
+        <li>내용1 index0</li>
+        <li>내용2 index1</li>
+        <li>내용3 index2</li>
+        <li>내용4 index3</li>
+        <li>내용5 index4</li>
+        <li>내용6 index5</li>
+        <li>내용7 index6</li>
+        <li>내용8 index7</li>
+    </ul>
+
+</body>
+</html>

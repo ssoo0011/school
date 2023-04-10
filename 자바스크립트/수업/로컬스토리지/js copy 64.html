@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var personLisnt = [
+            {name : 'kim', age : 20},
+            {name : 'lee', age : 21},
+            {name : 'park', age : 22}]
+        
+        personLisnt.push({name : '소영', age : 25})
+        personLisnt.push({name : '애옹', age : 2})    
+
+        window.localStorage.setItem('personList', personLisnt)
+        window.localStorage.setItem('personList', JSON.stringify(personLisnt))
+        
+        var result = window.localStorage.getItem('personList')
+        // console.log(result)
+        result = JSON.parse(result) //String to JSON, 이케해야 값 읽을 수 있음.
+        console.log(result)
+        console.log(personLisnt[0].age)
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

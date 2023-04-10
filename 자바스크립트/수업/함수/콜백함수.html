@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //콜백함수란 
+         //다른 함수의 인자로 이용되는 함수
+        var time = 1
+        var min = 0
+        function maFunc(){
+            console.log(time)
+            
+            if(time <=59 && min >= 1){
+                document.write(min + " : " + time + "   ")
+            }
+            if (time == 60){
+                time = 0;
+                min++
+                document.write(min + " : 00   ")
+            }
+            if(min < 1 && time <= 59){
+                document.write(time + "   ")
+            }
+            time++;
+        }
+        // setTimeout(maFunc, 3000) 
+        // //3000밀리세컨드 뒤에 maFunc 호출
+        // //원래 있는 함수임
+
+        setInterval(maFunc, 10)
+        //1000밀리 세컨드마다! 호출(시계 만들 수 있음! 와!)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

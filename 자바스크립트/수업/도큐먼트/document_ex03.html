@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            height: 300px;
+            width: 100px;
+            background-color: palevioletred;
+            text-align: center;
+            padding-left: 17px;
+            padding-top: 25px;
+            box-sizing: border-box;
+        }
+        #box{
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            text-align: center;
+            margin: 5px;
+            font-size: 20px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            background-color: khaki;
+            border: none;
+            position: relative;
+            right: 12px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function myFunc(){
+            // document.getElementById("box").innerText = "변경됨~"
+            // document.getElementById("box").innerHTML = "<b style ='color:red'>변경됨~</b>"
+            //""안에 스타일 등등 다 인식하고 적용 가능
+            
+            var box = document.getElementById("box")
+            box.innerHTML = "<b style ='color:red'>변경됨~</b>"
+            //이렇게 담아서도 사용 가능~~
+
+            // document.getElementById("box").innerText = "<b style ='color:red'>변경됨~</b>"
+            //""안에 있는 내용을 다 텍스트로 인식해서 스타일 먹히지 않음
+
+
+            //id에 접근, #안써도 됨
+        }
+    </script>
+</head>
+<body>
+    <div id = "wrap">
+        <div id="box">
+
+        </div>
+
+        <button onclick="myFunc()">클릭</button>
+    </div>
+
+</body>
+</html>

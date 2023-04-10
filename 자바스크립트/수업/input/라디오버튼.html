@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+            var myRadio = document.getElementsByClassName("my-radio")
+            for(var i = 0; i < myRadio.length; i++){
+                if(myRadio[i].checked === true){
+                    alert(myRadio[i].value)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>isfp</label>
+    <input type="radio" name = "radio-group1" class = "my-radio" value="isfp"> 
+    <label>istp</label>
+    <input type="radio" name = "radio-group1" class = "my-radio" value="istp">
+    <label>isfj</label>
+    <input type="radio" name = "radio-group1" class = "my-radio" value="isfj">
+    <!-- 네임 값을 같게 하면 중복체크x, 같은 라디오 그룹으로 묶이게 됨 -->
+    <button onclick="myFunc()">클릭!</button>
+</body>
+</html>

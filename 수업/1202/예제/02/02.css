@@ -1,0 +1,41 @@
+#wrap>ul>li{
+    float: left;
+    margin-right: 5px;
+    list-style: none;
+}
+
+.watch{
+    font-size: 11px;
+    color: white;
+    border-radius: 100%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.age12{
+    background-color: dodgerblue;
+    padding-left: 6px;
+    padding-top: 7px;
+    margin-left: 10px;
+}
+.age15{
+    background-color: orange;
+    padding-left: 8px;
+    padding-top: 7px;
+    margin-left: 10px;
+}
+.age20{
+    background-color: red;
+    padding-left: 8px;
+    padding-top: 7px;
+    margin-left: 10px;
+}
+.ageall{
+    background-color: green;
+    padding-left: 8px;
+    padding-top: 7px;
+    margin-left: 10px;
+}

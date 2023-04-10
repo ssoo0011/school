@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <style>
+      #box{
+         width:100px;
+         height:100px;
+         background-color: pink;
+         margin-top: 20px;
+         position: relative;
+      }
+   </style>
+   <title>Document</title>
+   <script>
+      var l = 0;
+      var b = 0;
+
+      $(function(){
+         $(document).on('keydown', funk)
+         function funk(e){
+            switch (e.keyCode) {
+               case 37: //왼
+                  $("#box").animate({"left":"-=100px"},100)
+                  l-=100
+                  break;
+               case 38: //위
+                  $("#box").animate({"top":"-=100px"},100)
+               break;
+               case 39: //오
+                  $("#box").animate({"left":"+=100px"},100)
+               break;
+               case 40: //아
+                  $("#box").animate({"top":"+=100px"},100)
+                  b-=100
+               break;
+               case 96: //0
+                  $("#box").animate({"left" : l-l, "top" : b-b},1)
+               break;
+         
+               default:
+                  break;
+            }
+         }
+         
+      })
+   </script>
+</head>
+<body>
+   <button id="left-move">왼쪽</button>
+   <button id="right-move">오른쪽</button>
+   <button id="top-move">위</button>
+   <button id="bottom-move">아래</button>
+   <button id="start-position">시작위치로</button>
+   <div id="box">
+      박스
+   </div>
+</body>
+</html>

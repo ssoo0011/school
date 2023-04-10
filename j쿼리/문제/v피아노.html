@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 40px;
+            height: 100px;
+            background-color: white;
+            float: left;
+            margin-left: 10px;
+            border: 1px solid pink;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $(document).on('keydown', myfunc)
+            var id;
+            let audioFile = new Audio('./피아노 음원/1_do.wav')
+            function myfunc(e){
+                switch(e.keyCode){
+                    case 49:
+                        audioFile.setAttribute('src', './피아노 음원/1_do.wav')
+                        audioFile.play();
+                        $('#c').css({'background-color' : "pink"})
+                        $(document).on('keyup',function(){
+                            $('#c').css({'background-color' : "white"}) 
+                        })
+                        break;
+                    
+                    case 50:
+                       audioFile.setAttribute('src', './피아노 음원/2_re.wav')
+                       audioFile.play();
+                       $('#d').css({'background-color' : "pink"})
+                       $(document).on('keyup',function(){
+                            $('#d').css({'background-color' : "white"}) 
+                        })
+                        break;
+
+                    case 51:
+                        audioFile.setAttribute('src', './피아노 음원/3_mi.wav')
+                        audioFile.play();
+                        $('#e').css({'background-color' : "pink"})
+                        $(document).on('keyup',function(){
+                            $('#e').css({'background-color' : "white"}) 
+                        })
+                        break;
+                        
+                    case 52:
+                        audioFile.setAttribute('src', './피아노 음원/4_pa.wav')
+                        audioFile.play();
+                        $('#f').css({'background-color' : "pink"})
+                        $(document).on('keyup',function(){
+                            $('#f').css({'background-color' : "white"}) 
+                        })
+                        break;
+                    
+                    case 53:
+                        audioFile.setAttribute('src', './피아노 음원/5_sol.wav')
+                        audioFile.play();
+                        $('#g').css({'background-color' : "pink"})
+                        $(document).on('keyup',function(){
+                            $('#g').css({'background-color' : "white"}) 
+                        })
+                        break;
+                    
+                    case 54:
+                        audioFile.setAttribute('src', './피아노 음원/6_ra.wav')
+                        audioFile.play();
+                        $('#a').css({'background-color' : "pink"})
+                        $(document).on('keyup',function(){
+                            $('#a').css({'background-color' : "white"}) 
+                        })
+                        break;
+                        
+                    case 55:
+                        audioFile.setAttribute('src', './피아노 음원/7_si.wav')
+                        audioFile.play();
+                        $('#b').css({'background-color' : "pink"})
+                        $(document).on('keyup',function(){
+                            $('#b').css({'background-color' : "white"}) 
+                        })
+                        break;
+
+                    case 56:
+                        audioFile.setAttribute('src', './피아노 음원/8_do.wav')
+                        audioFile.play();
+                        $('#c2').css({'background-color' : "pink"})
+                        $(document).on('keyup',function(){
+                            $('#c2').css({'background-color' : "white"}) 
+                        })
+                        break;
+                }
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <div id="c">도</div>
+    <div id="d">레</div>
+    <div id="e">미</div>
+    <div id="f">파</div>
+    <div id="g">솔</div>
+    <div id="a">라</div>
+    <div id="b">시</div>
+    <div id="c2">도</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = prompt("숫자1")
+        var num2 = prompt("숫자2")
+        num2 = parseInt(num2)
+        num1 = parseInt(num1)
+        var sum = 0;
+
+  
+        if(num1<num2){
+            
+            while(num1<=num2){
+                sum+=num1
+                document.write(num1)
+                num1++
+                
+            }document.write(sum)
+        }else{
+            document.write("시작 숫자가 작아야합니다.")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

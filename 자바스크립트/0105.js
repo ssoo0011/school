@@ -1,0 +1,34 @@
+var name = "정소영";
+var age = 28;
+var height = 166.6;
+
+document.write("이름: " + name, "<br>")
+document.write("나이: " +age, "<br>")
+document.write("키: " +height, "<br>")
+//<br>태그로 줄바꿈한다.
+
+//document(국방부 장관) 객체 : window(대통령)객체의 하부객체, html객체를 관장, 돔제어
+//클래스 : 설게도, 객체 : 빌딩 (붕어빵)
+document.write("hello : " + 20, "<br>") // 정수가 문자열로 자동 형변환
+document.write(23 + 3.14 , "<br>") //타입이 달라도 연산 가능, 컴퓨터가 자동으로 변환해줌
+//실수 + 정수 => 실수형에 맞춰서 계산
+
+document.write("hello : "+ 20 , "<br>")
+document.write("hello : "+ "20" , "<br>")
+document.write("hello : 20", "<br>")
+//셋 다 결과가 같다.   
+
+var num1= 10;
+var num2 = 30;
+document.write(num1+num2, "<br>");
+result = (num2 - num1);
+document.write(result, "<br>");
+
+var num = 5;
+var result1 = (num--)+5;
+document.write(num, "<br>");
+document.write(result1, "<br>");
+var num4 = 5;
+var result2 = (--num4)+5;
+document.write(num4, "<br>");
+document.write(result2, "<br>");

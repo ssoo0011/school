@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){
+            //인덱스 번호 출력!
+            var arr1 = ['서울', '대전', '부산', '전주']
+            var arr2 = ['한국', '미국', '니본', '중국']
+            var idxNum = $.inArray("부산",arr1)
+            console.log(idxNum)
+
+            var okArray = $.isArray(arr1) //배열 객체가 맞는가?
+            console.log(okArray) //true
+
+            $.merge(arr1, arr2);
+            console.log(arr1)
+            //앞으 ㅣ배열에 뒤의 배열 추가하기
+        })
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>정소영!!!!!!</h1>
+    </div>
+    <div>
+        <h1>짱장맨!</h1>
+    </div>
+</body>
+</html>

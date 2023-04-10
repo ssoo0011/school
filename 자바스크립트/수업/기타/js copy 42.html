@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const xhr = new XMLHttpRequest()
+        // 서버로부터 데이터 받아오기 위한 객체
+
+        const method = "GET";
+        const url = "35db8ba64e4a5a1a02fe63ab0c062ab8"; //요청 초기화
+        xhr.open(method, url)
+        //open함수를 통해 요청 초기화
+
+        //onreadystatechange 이벤트를 이용해 요청에 대한 응답결과 처리
+        //onreadystatechange 프로퍼티는 
+        //XMLHttpRequest객체의 readyState프로퍼티 값이 변할 때 마다 자동으로 호출되는 함수를 설정
+        xhr.onreadystatechange = function(event){
+            //속성에 콜백함수 설정
+            //응답이 와서 상태값이 변하면 호출됨
+            const{target} = event //이벤트 객체
+            if(target.readyState === XMLHttpRequest.DONE){
+                //응답이 왼료 되면
+                const { status } = target;
+            }
+            if(status === 0 || status >= 200 && status < 400){
+                //요청이 정상적으로 처리되면
+                //status = 서버의 문서 상태 나타냄
+                console.log(status) //200나옴
+                //서버에 문서가 존재하므로
+                console.log(xhr.response);
+                //응답은 글ㅈ형태로, 후에 JSON파싱작업이 필요함              
+                const movieObj = JSON.parse(xhr.response)
+                console.log(movieObj)
+                const movieList = movieObj.data.movies
+                //xhr.response이 string 데이터를 JSON타입으로 변환한다.
+                console.log(movieList)
+
+            }else{
+                //DPFJQKFTODTL
+            }
+        };
+        xhr.send();
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

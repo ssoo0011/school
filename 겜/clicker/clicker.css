@@ -1,0 +1,102 @@
+*{
+    margin: auto;
+    border-radius: 7px;
+}
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrap{
+    font-family: ONE-Mobile-POP;
+    width: 500px;
+    height: 800px;
+    background-color: pink;
+    margin-top: 50px;
+}
+#bg{
+    width: 450px;
+    height: 400px;
+    background-color: aliceblue;
+    position: relative;
+    top: 20px;
+}
+
+#total_gold{
+    width: 150px;
+    height: 40px;
+    background-color: skyblue;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: palevioletred;
+    text-align: center;
+    padding-top: 10px;
+}
+#animal{
+    width: 440px;
+    height: 350px;
+    background-color: yellowgreen;
+    position: relative;
+    top: 40px;
+}
+#cat{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 270px;
+    left: 180px;
+}
+.upgrd{
+    width: 450px;
+    height: 300px;
+    background-color: azure;
+    margin-top: 30px;
+    overflow-y: scroll;
+}
+.gold{
+    width: 420px;
+    height: 50px;
+    background-color: white;
+    position: relative;
+    top: 10px;
+}
+#gold_text{
+    width: 340px;
+    height: 45px;
+    background-color: seashell;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 11px;
+    box-sizing: border-box;
+}
+button{
+    border: 1px solid pink;
+    background-color: lightpink;
+    color: white;
+    width: 80px;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: ONE-Mobile-POP;
+}
+button:active{
+    border: 3px solid lightcoral;
+}
+.upgrd::-webkit-scrollbar {
+    width: 12px;  /* 스크롤바의 너비 */
+}
+
+.upgrd::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: lightsalmon; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+
+.upgrd::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}

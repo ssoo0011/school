@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 300px;
+            /* height: 300px; 높이 없애면 자식요소 생기는 만큼 늘어남*/
+            background-color: aqua;
+        }
+        #box{
+            width: 300px;
+            height: 30px;
+            background-color: beige;
+            margin-top: 5px;
+            font-weight: bold;
+            padding-top: 2px;
+            box-sizing: border-box;
+        }
+        #textinput{
+            width: 240px;
+            height: 30px;
+        }
+
+    </style>
+    <script>
+        function createDiv(){
+            var mywrap = document.getElementById("wrap")
+            var textinput = document.getElementById('textinput')
+            var mydiv = document.createElement('div')//원소 생성
+            mydiv.setAttribute("id", "box")
+            mydiv.innerText = textinput.value
+            mywrap.appendChild(mydiv) // 생성한 div를 자식처럼 추가한다.
+            textinput.value = ""
+        }
+        function deleteDiv(){
+            var mywrap = document.getElementById("wrap")
+            var lastChild = mywrap.lastChild //warp의 마지막 자식 위치
+            var index
+            mywrap.removeChild(lastChild) //괄호 자식 제거!
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="textinput">
+    <button onclick="createDiv()">클릭</button>
+    <button onclick="deleteDiv()">제거</button>
+
+    <div id="wrap">
+
+    </div>
+</body>
+</html>

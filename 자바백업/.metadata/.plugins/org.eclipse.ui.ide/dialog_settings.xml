@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\정소영\JDBC\src\common"/>
+			<item value="D:\정소영\cookie\src"/>
+			<item value="D:\정소영\WebMarket"/>
+			<item value="D:\정소영\WebMarket\src"/>
+			<item value="D:\정소영\WebMarket\WebContent"/>
+			<item value="D:\정소영\BoardProject\src"/>
+			<item value="C:\Users\YJ\Desktop\개발\jsp"/>
+			<item value="D:\정소영"/>
+			<item value="D:\정소영\self\소영Board"/>
+			<item value="D:\정소영\예비\src\남의거"/>
+			<item value="D:\정소영\Member12 (UTF-8)"/>
+			<item value="D:\정소영\회원관리\src"/>
+			<item value="D:\정소영\회원관리"/>
+			<item value="D:\정소영\교수님\회원관리"/>
+			<item value="D:\정소영\S1221\src"/>
+			<item value="D:\정소영\S1220\src"/>
+			<item value="D:\정소영\S1219\src"/>
+			<item value="D:\정소영\S1214\src"/>
+			<item value="D:\정소영\S1213\src"/>
+			<item value="D:\정소영\study"/>
+			<item value="D:\정소영\S1212\src"/>
+			<item value="D:\정소영\S1208\src"/>
+			<item value="D:\정소영\S1208"/>
+			<item value="D:\정소영\S1206\src"/>
+			<item value="D:\정소영\S1207\src"/>
+			<item value="D:\정소영\S1206\src\calendar"/>
+			<item value="D:\정소영\S1206\src\study"/>
+			<item value="D:\정소영\S1206\src\실습문제"/>
+			<item value="D:\정소영\S1140"/>
+			<item value="D:\정소영\S1139"/>
+			<item value="D:\정소영\pdf"/>
+			<item value="D:\정소영\book"/>
+			<item value="D:\정소영\S1219"/>
+			<item value="D:\정소영\S1214-1"/>
+			<item value="D:\정소영\S1214\S1214-1"/>
+			<item value="D:\정소영\S1214"/>
+			<item value="D:\정소영\S1213"/>
+			<item value="D:\정소영\S1212"/>
+			<item value="D:\정소영\S1207"/>
+			<item value="D:\정소영\S1206"/>
+			<item value="D:\정소영\S1205"/>
+			<item value="D:\정소영\S1123\S1123"/>
+			<item value="D:\정소영\S1123"/>
+			<item value="D:\정소영\S1131"/>
+			<item value="D:\정소영\S1130"/>
+			<item value="D:\정소영\S1129"/>
+			<item value="D:\정소영\S1128"/>
+			<item value="D:\정소영\S1123 (1)"/>
+			<item value="C:\Users\YJ\Downloads\S1123 (1)"/>
+			<item value="D:\정소영\S1122"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\YJ\Desktop\S1122"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="668"/>
+			<item key="DIALOG_Y_ORIGIN" value="195"/>
+			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		</section>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="225"/>
+		<item key="DIALOG_Y_ORIGIN" value="137"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="387"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="401"/>
+		<item key="DIALOG_Y_ORIGIN" value="295"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

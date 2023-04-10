@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count = prompt("몇 명의 성적?")
+        count = parseInt(count)
+        var score = 0
+        var scoreArr = new Array(0) //0
+        var sum = 0
+        var aver = 0;
+        for(var i = 1; i<= count ; i++){
+            score = prompt(i+"번째 성적")
+            score = parseInt(score)
+            scoreArr.push(score) //push = 늘리면서 넣기
+            sum += score
+            
+        }
+        aver = sum / scoreArr.length
+        document.write("평균은 " + aver)
+        console.log(scoreArr)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

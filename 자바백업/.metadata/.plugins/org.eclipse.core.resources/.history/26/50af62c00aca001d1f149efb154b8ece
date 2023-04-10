@@ -1,0 +1,37 @@
+package script;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.jsp.JspWriter;
+
+
+@WebServlet("/script.do")
+public class Script extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException{
+		System.out.println("여긴오냐?");
+		resp.setContentType("text/html; charset=UTF-8");
+		
+		PrintWriter out = resp.getWriter();
+		 
+		out.println("<script>alert('계정이 등록 되었습니다'); location.href='/sc/Script.jsp';</script>");
+		 
+		out.flush();
+
+	    req.getRequestDispatcher("/sc/Script.jsp").include(req,  resp);
+	     
+	    return;
+
+	}
+	
+
+
+}

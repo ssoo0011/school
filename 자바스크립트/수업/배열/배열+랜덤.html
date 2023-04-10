@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var dice_arr = [0, 0, 0, 0, 0, 0, 0];
+        var dice_per_arr=[0, 0, 0, 0, 0, 0, 0];
+        //0번째는 버릴거임
+        var count = 0;
+        var num = 0
+
+        count = prompt("주사위 몇 번?")
+        count = parseInt(count)
+        for(var i = 1; i <= count; i++){
+            num = Math.ceil(Math.random()*6)
+
+            dice_arr[num]++
+        }
+        document.write(dice_arr, "<br>")
+        for(var i = 1; i<=6; i++){
+            document.write(`${i}이 나온 횟수 : ${dice_arr[i]}`, "<br>")
+        }
+        for(var i = 1; i<=6; i++){
+            dice_per_arr[i] = (dice_arr[i]/count)*100
+        }
+        for(var i = 1; i<=6; i++){
+            document.write(`${i}이 나온 확률 : ${dice_per_arr[i].toFixed(3)}%`, "<br>")
+        } //소수점 개수 제한
+
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <style>
+    
+   </style>
+   <title>Document</title>
+   <script>
+      $(document).ready(function(){
+          $("#btn").click(function(){
+            //alert("btn!")
+            var result=$("input:radio[name='my-radio']:checked").val()
+            //라디오 버튼중에 체크된 것의 value값을 읽어옴
+            alert(result)
+          })
+      })
+   </script>
+</head>
+<body>
+   <input type="radio" name="my-radio" value="사과"/>
+   <input type="radio" name="my-radio" value="배"/>
+   <input type="radio" name="my-radio" value="포도"/>
+   <button id="btn">클릭</button>
+</body>
+</html>

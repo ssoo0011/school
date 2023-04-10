@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            width: 235px;
+            height: 50px;
+            position: relative;
+            top: 20px;
+            border-radius: 20px;
+            padding-top: 13px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: lightpink;
+        }
+    </style>
+    <script>
+
+        var i = 0;
+        var min = 0;
+        var sc = 0;
+        var remin = 0;
+        var resc = 0;
+        var result = null;
+
+        //배열에 오디오 넣기
+        var audioFile = [new Audio('./audio/my_piano1.mp3'),new Audio('./audio/my_piano2.mp3'),new Audio('./audio/my_piano3.mp3')]
+
+        function myFunc(){ //초 분 재기, 노래 초 분이랑 같아지면 넘기기
+
+            var minsc = " / " + min + " : " + sc
+
+            if(resc <=59 && remin >= 1 && remin < 10){
+                document.getElementById("a").innerText = "0"+remin + " : " + resc + minsc
+            }if (resc == 60){
+                resc = 0;
+                remin++
+                document.getElementById("a").innerText = remin + " : 00   "+ minsc
+            }
+            if(remin < 1 && resc <= 59){
+
+                document.getElementById("a").innerText =  "00 : " + resc + "   " + minsc
+            }if(remin < 1 && resc < 10){
+                document.getElementById("a").innerText =  "00 : " + "0"+resc + "   " + minsc
+            }
+            if(remin >= 1&& remin < 10 && resc < 10){
+                document.getElementById("a").innerText =  "0"+ remin + " : " + "0"+resc + minsc
+            }
+                        
+            if(remin === min && resc === sc){
+                next()
+            }
+            resc++
+        }
+        
+        function start(){ //오디오 재생LO
+
+            audioFile[i].play()
+            min = Math.floor(audioFile[i].duration / 60)
+            sc = Math.ceil(audioFile[i].duration % 60)
+            result = setInterval(myFunc, 1000)
+
+            
+        }
+        function pause(){ //오디오 멍처!
+            audioFile[i].pause()
+            clearInterval(result)
+        }
+        function stop(){
+            var minsc = " / " + min + " : " + sc
+            remin = 0
+            resc = 0
+            document.getElementById("a").innerText =  "00 : 00" +  minsc
+            clearInterval(result) //시간 정지
+            audioFile[i].pause()
+            audioFile[i].currentTime = 0 //노래 시간 0초로 당기기
+        }
+        function next(){
+            var minsc = " / " + min + " : " + sc
+            remin = 0
+            resc = 0
+            audioFile[i].pause()
+            audioFile[i].currentTime = 0
+            i = i+1
+
+            if(i > audioFile.length - 1){ //이전곡이 없으면 제일 끝곡으로 돌리기
+                i = 0
+            }
+
+            audioFile[i].play()
+
+            min = Math.floor(audioFile[i].duration / 60)
+            sc = Math.ceil(audioFile[i].duration % 60)
+        }
+        function back(){
+            var minsc = " / " + min + " : " + sc
+            remin = 0
+            resc = 0
+            audioFile[i].pause()
+            audioFile[i].currentTime = 0
+
+            i = i-1
+            if(i < 0){ //담곡 없으면 첫곡으로 넘기기
+                i = audioFile.length - 1
+            }
+            
+            audioFile[i].play()
+            min = Math.floor(audioFile[i].duration / 60)
+            sc = Math.ceil(audioFile[i].duration % 60)
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="start()">시작</button>
+    <button onclick="pause()">중지</button>
+    <button onclick="stop()">끄기</button>
+    <button onclick="next()">다음</button>
+    <button onclick="back()">이전</button>
+
+    <div id="a"></div>
+
+
+</body>
+</html>
+
+

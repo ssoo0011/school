@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        // 사용자가 취하는 모든 행위
+        //이벤트 핸들러 -> 이벤트가 발생햇을 때 실행되는 코드
+        //단독 이벤트 등록, 그룹 이벤트 등록
+
+        //$('#btn').click(function(){}) 버튼 클릭하면 콜백함수 실행
+        $(document).ready(function(){
+            $('.btn1').click(function(){
+                document.write("버튼!")
+                //=document.getElementById(btn1).addEventListener('click', myFunc)
+            })
+        })        
+    </script>
+
+</head>
+<body>
+    <button class = "btn1">버튼 꾸욱!</button>
+</body>
+</html>

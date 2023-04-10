@@ -1,0 +1,28 @@
+package Controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Board.BoardDAO;
+
+public class VeiwController {
+	
+	@WebServlet("/MVCBoard/view.do")
+	public class WriteController extends HttpServlet {
+
+		protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+				throws ServletException, IOException{
+				
+			req.setCharacterEncoding("utf-8");
+			
+			req.getRequestDispatcher("/MVCBoard/View.jsp").forward(req,  resp);
+			
+			dao.close();
+		}
+	}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){
+            $('.box').css({'background-color' : "yellow"})
+            .css({'width' : "200px"})
+            .css({'height' : "200px"})
+
+            var arr1 = [
+                {"no" : "1", "name" : "박지성", "position" : "미드필더"},
+                {"no" : "2", "name" : "안정환", "position" : "공격수"},
+                {"no" : "3", "name" : "김민재", "position" : "수비수"},
+                {"no" : "4", "name" : "이영표", "position" : "수비수"},
+                {"no" : "5", "name" : "이강인", "position" : "공격수"},
+                {"no" : "6", "name" : "기성용", "position" : "미드필더"},
+                {"no" : "7", "name" : "조구셩", "position" : "공격수"},
+            ]
+            
+            var arr2 = $.map(arr1, function(a, b){
+                if(a.position == "수비수"){
+                    return a;
+                }
+            })
+
+            $.each(arr2, function(i, o){
+                //i = index버호 , o는 value
+                console.log("----------------------")
+                console.log(i + " : ", o)
+                document.write(o.no + "번 " +o.name+' , 포지션 :'+o.position + "<br>")
+
+            })      
+        })
+
+    </script>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>

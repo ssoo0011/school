@@ -1,0 +1,21 @@
+
+class Word{
+	
+	String korean;
+	String english;
+	
+	public Word(String korean, String english) {
+		this.korean = korean;
+		this.english = english;
+	}
+}
+
+public class OpenChallenge {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

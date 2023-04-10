@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul{
+        width: 1000px;
+        height: 50px;
+        background-color: white;
+        list-style: none;
+        padding-top: 7px;
+        box-sizing: border-box;
+        position: relative;
+        color: gray;
+    }
+    ul>li{
+        float: left;
+        margin-right: 30px;
+        position: relative;
+    }
+
+    ul>li::before{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 20px;
+        background-color: #e2e2e2;
+        position: absolute;
+    }
+
+    ul>li:first-child::before{ /*포지션은 위에서 줬기때문에 위치이돔만 하면 됨*/
+        left: 95px;
+    }
+    ul>li:nth-child(2)::before{
+        left: 78px
+    }
+    ul>li:nth-child(3)::before{
+        left: 78px
+    }
+    ul>li:nth-child(4)::before{
+        left: 145px
+    }
+    ul>li:nth-child(5)::before{
+        left: 125px
+    }
+    ul>li:nth-child(6)::before{
+        left: 143px;
+    }
+    ul>li:last-child::before{
+        display: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: #ff7883;
+    }
+
+    ul>li>a:hover{
+        color: #78a1ff;
+    }
+
+</style>
+<body>
+    <ul>
+        <ul>
+            <li><a href="#">G마켓 소개</a></li>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#"><b>개인정보보호정책</b></a></li>
+            <li><a href="#">청소년보호정책</a></li>
+            <li><a href="#">전자금융거래약관</a></li>
+            <li><a href="#">제휴-광고</a></li>
+        </ul>
+    </ul>
+</body>
+</html>

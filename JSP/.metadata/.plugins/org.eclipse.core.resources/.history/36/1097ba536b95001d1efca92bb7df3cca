@@ -1,0 +1,91 @@
+import java.util.Vector;
+
+import com.sun.org.apache.bcel.internal.generic.INEG;
+
+class Word{
+	
+	String korean;
+	String english;
+	
+	public Word(String korean, String english) {
+		this.korean = korean;
+		this.english = english;
+	}
+
+	public String getKorean() {
+		return korean;
+	}
+
+	public void setKorean(String korean) {
+		this.korean = korean;
+	}
+
+	public String getEnglish() {
+		return english;
+	}
+
+	public void setEnglish(String english) {
+		this.english = english;
+	}
+}
+
+public class OpenChallenge {
+
+	public static void main(String[] args) {
+		
+		System.out.println("명품영어의 단어 테스트를 시작합니다. -1을 입력하면 종료합니다.");
+		System.out.println("현재 17단어가 있습니다.");
+		
+		Vector<Word> v = new Vector<Word>();
+		v.add(new Word("그림그리다", "painting"));
+		v.add(new Word("사랑", "love"));
+		v.add(new Word("소영", "soyoung"));
+		v.add(new Word("고양이", "cat"));
+		v.add(new Word("강아지", "puppy"));
+		v.add(new Word("물", "water"));
+
+		
+		while (true) {
+			int num = 0;
+			int index = (int)(Math.random()*6);
+			System.out.println(v.get(index).getEnglish());//랜덤 문제
+
+			while (num < 4) {
+				
+				index = (int)(Math.random()*6);
+				System.out.println("(" + 4 + ")" + v.get(index).getKorean());
+				
+			}
+
+
+			
+			
+		}
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

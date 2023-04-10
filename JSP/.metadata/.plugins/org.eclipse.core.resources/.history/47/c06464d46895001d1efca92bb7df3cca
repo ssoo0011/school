@@ -1,0 +1,17 @@
+
+class Word{
+	
+	String korean;
+	String english;
+	
+}
+
+public class OpenChallenge {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

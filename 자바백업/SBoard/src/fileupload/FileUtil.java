@@ -1,0 +1,141 @@
+package fileupload;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import Board.*;
+import management.JSFunction;
+
+import com.oreilly.servlet.MultipartRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class FileUtil {
+	
+	HttpServletRequest req;
+	HttpServletResponse resp;
+	
+	public BoardDTO UpFile(HttpServletRequest req) {
+		
+		//폴더 경로
+		String saveDirectory = req.getServletContext().getRealPath("파일업로드");
+		
+		File folder = new File(saveDirectory);
+		
+		int maxPostSize = 1024*1000; //용량
+		String encoding = "UTF-8";
+		String fileName = "";
+		String newFileName = "";
+		BoardDTO dto= new BoardDTO();;
+		
+		try{
+			
+			MultipartRequest mr = new MultipartRequest(req, saveDirectory, 
+			maxPostSize, encoding);
+			
+			fileName = mr.getFilesystemName("ofile");
+			
+			String ext = fileName.substring(fileName.lastIndexOf("."));
+			String now = new SimpleDateFormat("yyyyMMdd_HmsS").format(new Date());
+			newFileName = now + ext; //파일 새로운 이름
+			
+			File oldFile = new File(saveDirectory + File.separator + fileName);
+			File newFile = new File(saveDirectory + File.separator + newFileName);
+			oldFile.renameTo(newFile);
+			
+			String[] cateArray = mr.getParameterValues("cate");
+			StringBuffer cateBuf = new StringBuffer();
+			
+			dto.setName(mr.getParameter("name"));
+			dto.setTitle(mr.getParameter("title"));
+			dto.setContent(mr.getParameter("content"));
+			dto.setPass(mr.getParameter("pass"));
+			dto.setOfile(mr.getFilesystemName("ofile"));
+			dto.setSfile(newFileName);
+			
+			if(cateArray == null){
+				cateBuf.append("선택없ㄷ음");
+				
+			}else{
+				for(String s : cateArray){
+					cateBuf.append(s+ ", ");
+				}
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			req.setAttribute("errorMessage", "파일 업로드 오류");
+			System.out.println("파일 이름 뭐노~!");
+		}
+		
+		return dto;
+	}
+	
+	
+	public void DownFile(HttpServletRequest req) {
+		String saveDirectory = req.getServletContext().getRealPath("파일업로드");
+		String saveFileName = req.getParameter("sfile");
+		String originalFileName = req.getParameter("ofile");
+		
+		try{
+			File file = new File(saveDirectory, saveFileName);
+			InputStream inStream = new FileInputStream(file);
+			
+			String client = req.getHeader("User-Agent");
+			if(client.indexOf("WOW64") == -1){
+				originalFileName = new String(originalFileName.getBytes("UTF-8"), 
+						"ISO-8859-1");
+			}else{
+				originalFileName = new String(originalFileName.getBytes("KSC5601"), 
+						"ISO-8859-1");
+			}
+			
+			resp.reset();
+			resp.setContentType("application/octet-stream");
+			resp.setHeader("Content-Disposition",
+					"attachment; filename=\""+ originalFileName + "\"");
+			
+			OutputStream outStream = resp.getOutputStream();
+			
+			byte b[] = new byte[(int)file.length()];
+			int readBuffer = 0;
+			
+			while((readBuffer = inStream.read(b)) > 0){
+				outStream.write(b, 0, readBuffer);
+			}
+			
+			inStream.close();
+			outStream.close();
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

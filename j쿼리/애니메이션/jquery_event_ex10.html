@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+      $(function(){    //mousemove발생시~ 콜백함수 실행~
+        $(document).on("mousemove",function(e){//이벤트 객체 정보 받음
+            $(".posX").text(e.pageX)//이벤트 객체에서 X위치
+            $(".posY").text(e.pageY)//이벤트 객체에서 Y위치
+        })
+      })
+  </script>
+</head>
+<body>
+    <h1>mousemove</h1>
+    <p>X:<span class="posX">0</span>px</p>
+    <p>Y:<span class="posY">0</span>px</p>
+</body>
+</html>

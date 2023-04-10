@@ -1,0 +1,40 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+
+public class book7 {
+	public static void main(String[] args) {
+		
+		
+		HashMap<String, Double> grade = new HashMap<String, Double>(5);
+		
+		System.out.println("미래장학금 관리시스템입니다.");
+		Scanner scanner = new Scanner(System.in);
+		while (grade.size() <= 2) {
+			
+			System.out.print("이름과 학점>>");
+			String name = scanner.next();
+			Double score = scanner.nextDouble();
+			System.out.println(name + score);
+			grade.put(name, score); //이름이랑 학점 해쉬맵에 집어넣기
+		}
+			
+			System.out.println("장학생 선발 학점 기준 입력");
+			Double maxscore = scanner.nextDouble();
+			
+			Set<String> key = grade.keySet();
+			Iterator<String> keyit = key.iterator();//여까지 됨
+			
+			while (keyit.hasNext()) {
+				String name = keyit.next();
+				Double scor = grade.get(name);//키에 맞는 점수 찾기
+				
+				if (maxscore <= scor) {
+					System.out.println(name);
+				}
+				
+			}
+		
+	}
+}

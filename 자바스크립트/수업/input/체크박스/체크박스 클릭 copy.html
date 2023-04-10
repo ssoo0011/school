@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>    
+    <script>
+        //체크박스 체크한 메뉴의 총 합 계산하여 출력
+        
+        var menuList = [{menu : '짜장면', price : 5000},
+                        {menu : '짬뽕', price : 7000},
+                        {menu : '탕수육', price : 18000}]
+        var sum = 0
+
+        document.write(menuList[0].price, "<br>")
+
+        function myFunc(){
+            var myCheck = document.getElementsByClassName("mycheck")
+            for(var i = 0; i < myCheck.length; i++){
+                if(myCheck[i].checked === true){
+                    sum +=menuList[i].price
+                    // document.write(menuList[i].price)
+
+                }
+            }
+            document.write(sum)
+        }
+    </script>
+</head>
+<body>
+    <label>짜장면</label>
+    <input type="checkbox" class="mycheck" value="짜장면"/>
+    <label>짬뽕</label>
+    <input type="checkbox" class="mycheck"value="짱뽕"/>
+    <label>탕수육</label>
+    <input type="checkbox" class="mycheck"value="탕수육"/>
+    <button onclick="myFunc()">클릭</button>
+
+</body>
+</html>

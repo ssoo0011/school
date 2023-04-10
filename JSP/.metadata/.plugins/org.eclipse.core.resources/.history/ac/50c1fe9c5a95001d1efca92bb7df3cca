@@ -1,0 +1,16 @@
+
+class Location{
+	
+	String city;
+	double sn;//위도
+	double dw;//경도
+	
+	
+}
+
+
+public class book06 {
+	public static void main(String[] args) {
+	
+	}
+}

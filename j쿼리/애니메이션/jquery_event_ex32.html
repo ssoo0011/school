@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <style>
+      #box{
+         width:100px;
+         height:100px;
+         background-color: red;
+         position: relative;
+      }
+   </style>
+   <title>Document</title>
+   <script>
+      $(document).ready(function(){
+         var leftValue=0
+         $("#animate").click(function(){
+            leftValue += 100
+            $("#box").animate({"left":leftValue+"px"})
+         })
+      })
+   </script>
+</head>
+<body>
+   <button id="animate">animate</button>
+   <div id="box">
+      박스
+   </div>
+</body>
+</html>

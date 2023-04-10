@@ -1,0 +1,17 @@
+package Board;
+
+public class BoardDTO {
+
+	private int idx;
+	private String name;
+	private String title;
+	private String cate;
+	private String content;
+	private java.sql.Date postdate;
+	private String ofile;
+	private String sfile;
+	private int downcount;
+	private String pass;
+	private String visitcount;
+	
+}

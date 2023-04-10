@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function myFunc() {
+            $("#box").css("backgroundColor", "red")
+            //$ = 접속
+        }
+
+        //document, ready 쓰지 않고 적어도 된다. 마지막에 안 써도 됨.
+        $(function(){
+            $("#txt").css("color", "red")
+        })
+        
+    </script>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <button onclick="myFunc()">클릭</button>
+    <p id="txt">짱짱맨!</p>
+</body>
+</html>

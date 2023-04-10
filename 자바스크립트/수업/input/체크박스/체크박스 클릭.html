@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function myFunc(){
+            var myCheck = document.getElementsByClassName("mycheck")
+            for(var i = 0; i < myCheck.length; i++){
+                if(myCheck[i].checked === true){
+                    alert(myCheck[i].value)
+                    //쇼핑몰 검색 필터 만든다고 생각하면 됨~~~
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <label>짜장면</label>
+    <input type="checkbox" class="mycheck" value="짜장면"/>
+    <label>짬뽕</label>
+    <input type="checkbox" class="mycheck"value="짱뽕"/>
+    <label>탕수육</label>
+    <input type="checkbox" class="mycheck"value="탕수육"/>
+    <button onclick="myFunc()">클릭</button>
+
+</body>
+</html>

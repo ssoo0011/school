@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+            var myImg = document.getElementById("my-img")
+            myImg.setAttribute("src", "./images/cat.png")
+            //속성을 바꾼다! 강아지 이미지였다가 고양이 이미지로 바뀜 ㄷㄷ
+        }
+    </script>
+</head>
+<body>
+    <img src="./images/dog.png" alt="사진" id="my-img">
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

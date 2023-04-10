@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr = [[1, 2, 3], [4, 5, 6]]
+        // //2행 3열 2차원 배열
+        // for(var i = 0; i <= arr.length; i++){ //행 변화
+        //     for(var j= 0; j <= 2; j++){ //열 변화
+        //         document.write(arr[i][j] + " ")
+        //     }document.write("<br>")
+        // }
+
+        var arr = new Array(0)
+        var ele = null;
+        var row = 2
+        var col = 3
+
+        for(var i = 0; i <= row; i++){
+            ele= new Array(0)
+            for(var j = 1; j <= col ; i++){
+                ele.push(10)
+            }
+            arr.push(ele)
+            ele = null
+        }
+        console.log(arr)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

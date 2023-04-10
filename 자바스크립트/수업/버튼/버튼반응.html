@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var time = 1;
+        var result = null;
+        
+        function myFunc(){
+            console.log(time)
+            time++
+        }
+        function start(){
+           result = setInterval(myFunc, 1000)
+           //0이 아닌 값을 뱐환, 한 번 실행되면 1 반환 두 번 실행되면 2 반환---
+
+        }
+        function stop(){
+            clearInterval(result) //setInterval 중지
+            //setInterval 반환 값 넣어줘야 중지 됨.
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="start()"> 시작</button>
+    <button onclick="stop()"> 중지</button>
+</body>
+</html>

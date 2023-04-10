@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){
+
+            var obj = [
+                {"area" : "서울"},
+                {"area" : "부산"},
+                {"area" : "전주"}
+            ]
+            //저장된 배열 문서 객체 만큼 반복 실행
+            //for문 쓰지 않아도 됨! ㄷㄷ
+
+            $(obj).each(function(i, o){
+                //i = index버호 , o는 value
+                console.log("----------------------")
+                console.log(i + " : ", o)
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div style="color : skyblue">정소영</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            height: 300px;
+            width: 100px;
+            background-color: palevioletred;
+            text-align: center;
+            padding-left: 17px;
+            padding-top: 25px;
+            box-sizing: border-box;
+        }
+        #box{
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            text-align: center;
+            margin: 5px;
+            
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            background-color: khaki;
+            border: none;
+            position: relative;
+            right: 12px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function myFunc(){
+            // document.querySelector("#box").innerText = "변경!"
+            var boxList = document.querySelectorAll("#wrap>#box")
+            //클릭하면 바뀌는거!
+            boxList[0].innerText = "변경1"
+            boxList[1].innerText = "변경2"
+            //아이디 박스요소에 접근해서 그 안에 글자 변경! 넣기
+        }
+        function myFunc2(){
+            // document.querySelector("#box").innerText = "변경!"
+            var boxList = document.querySelectorAll("#wrap>#box")
+            //클릭하면 바뀌는거!
+            alert(boxList[0].innerText)
+            alert(boxList[1].innerText)
+            //아이디 박스요소에 접근해서 그 안에 글자 변경! 넣기
+        }
+    </script>
+</head>
+<body>
+    <div id = "wrap">
+        <div id="box">
+
+        </div>
+        <div id="box">
+
+        </div>
+
+        <button onclick="myFunc()">클릭</button>
+        <button onclick="myFunc2()">조회</button>
+    </div>
+
+
+</body>
+</html>

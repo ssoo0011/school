@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <style>
+    
+   </style>
+   <title>Document</title>
+   <script>
+      $(document).ready(function(){
+            var result1=$("#my-check1").is(":checked")
+            var result2=$("#my-check2").is(":checked")
+            //is메서드 - 일치여부 확인, 선택한요소가 is에 선택한요소와 일치하는지
+            console.log(result1)//false
+            console.log(result2)//true
+      })
+   </script>
+</head>
+<body>
+   <input type="checkbox" id="my-check1"/>
+   <input type="checkbox" id="my-check2" checked/>
+</body>
+</html>

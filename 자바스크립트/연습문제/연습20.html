@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = prompt("시작 값 입력")
+        var num2 = prompt("끝 값 입력")
+        num1 = parseInt(num1)
+        num2 = parseInt(num2)
+        var sum = 0;
+
+        // while (num1 <= num2)  {
+        //     sum+=num1
+        //     num1++
+        // }
+        // document.write(sum)
+
+        //형변환!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        function plus(a, b){
+            while (num1 <= num2)  {
+            sum+=num1
+            num1++
+        }
+        return sum
+        }
+
+        result = plus(num1, num2)
+        document.write(result)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

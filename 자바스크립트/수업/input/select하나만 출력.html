@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ㅏ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+            var mySelect = document.getElementById("my-select")
+            var i = mySelect.selectedIndex
+            //셀렉트박스의 선택된 옵션의 인덱스 번호
+            console.log(mySelect.options[i].value)
+            //선택된 옵션의 value출력
+
+            
+        }
+    </script>
+</head>
+<body>
+    <select id="my-select">
+        <option value="apple">사과</option>
+        <option value="pear">배</option>
+        <option value="grape">포도</option>
+    </select>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

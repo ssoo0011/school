@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./js copy 58.css" type="text/css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    
+    <title>Document</title>
+<style>
+  /* 색상 변경 */
+  .change input, .change progress {
+      accent-color: red;
+    }
+    /*  */
+    .box {
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      border: 1px solid #000;
+    }
+    
+    .title {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    
+    .box > div {
+      margin-bottom: 1rem;
+    }
+    
+    .box label {
+      display: inline-block;
+      width: 10rem;
+    }
+    
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+    
+    * {
+      font-family: Pretendard;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="title">기본 색상</div>
+       
+       <div>
+         <label for="default1">체크박스 (checkbox)</label>
+        <input id="default1" type="checkbox">
+         <input type="checkbox" checked>
+       </div>
+       
+       <div>
+         <label for="default2">라디오 (radio)</label>
+         <input name="default2" id="default2" type="radio">
+         <input name="default2" type="radio" checked>
+       </div>
+       
+        <div>
+         <label for="default3">레인지 (range)</label>
+         <input id="default3" type="range">
+       </div>
+       
+       <div>
+         <label for="default2">프로그레스 (progress)</label>
+         <progress></progress>
+       </div>
+     </div>
+     
+     <div class="box change">
+       <div class="title">색상 변경</div>
+       
+       <div>
+         <label for="default5">체크박스 (checkbox)</label>
+        <input id="default5" type="checkbox">
+        <input id="default5" type="checkbox" checked>
+       </div>
+       
+       <div>
+         <label for="default6">라디오 (radio)</label>
+         <input name="default6" id="default6" type="radio">
+         <input name="default6"  type="radio" checked>
+       </div>
+       
+        <div>
+         <label for="default7">레인지 (range)</label>
+         <input id="default7" type="range">
+       </div>
+       
+       <div>
+         <label for="default2">프로그레스 (progress)</label>
+         <progress></progress>
+       </div>
+     </div>
+</body>
+</html>

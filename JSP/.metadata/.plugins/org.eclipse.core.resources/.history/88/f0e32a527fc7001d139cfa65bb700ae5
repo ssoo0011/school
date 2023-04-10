@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = 'Board.BoardDTO' %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<link href="../../CSS/Table.css" type = "text/css" rel = "stylesheet">
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" action="<%= request.getContextPath() %>/mvcboard/write.do">
+    <table border="1">
+        <tr>
+            <td width = '30%'> 작성자 </td>
+            <td width = '70%'> <input type="text"> </td>
+        </tr>
+        <tr>
+            <td> 제목 </td>
+            <td> <input type="text"> </td>
+        </tr>
+        <tr>
+            <td> 내용 </td>
+            <td> <input type="textarea"> </td>
+        </tr>
+        <tr>
+            <td> 첨부파일 </td>
+            <td> <input type="file"> </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button>작성 완료</button>
+                <button>다시 작성</button>
+                <button>목록 바로가기</button>
+            </td>
+        </tr>
+
+    </table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <style>
+        input{
+            appearance: none;   
+            border-color: antiquewhite;   
+            width: 20em;
+            height: 1em;
+            color: #f1769d;
+        }
+    </style>
+    <script>
+        function myFunc(){
+            var src = 'password' 
+            if(src === $('#pw').attr('type')){
+                var mysrc2 = $('#pw').attr('type', 'text')
+            }else {
+                 $('#pw').attr('type', 'password').css('color', '#f1769d')
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id = 'id'>
+    <input type="password" id = 'pw'>
+    <button onclick="myFunc()">얍!</button>
+</body>
+</html>

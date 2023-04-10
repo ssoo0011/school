@@ -1,0 +1,38 @@
+import java.util.Vector;
+
+class Word{
+	
+	String korean;
+	String english;
+	
+	public Word(String korean, String english) {
+		this.korean = korean;
+		this.english = english;
+	}
+}
+
+public class OpenChallenge {
+
+	public static void main(String[] args) {
+		
+		System.out.println("명품영어의 단어 테스트를 시작합니다. -1을 입력하면 종료합니다.");
+		System.out.println("현재 17단어가 있습니다.");
+		
+		Vector<Word> v = new Vector<Word>();
+		v.add(new Word("그림그리다", "painting"));
+		v.add(new Word("사랑", "love"));
+		v.add(new Word("소영", "soyoung"));
+		v.add(new Word("고양이", "cat"));
+		v.add(new Word("강아지", "puppy"));
+		v.add(new Word("물", "water"));
+		
+		int a = (int)(Math.random()*6);
+		
+		while (true) {
+			int a = (int)(Math.random()*6);
+			System.out.println(v[a]);
+		}
+	}
+	
+
+}

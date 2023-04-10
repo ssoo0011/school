@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;session&apos; to &apos;JDBC/src&apos;&#x0D;&#x0A;- Original project: &apos;session&apos;&#x0D;&#x0A;- Destination element: &apos;JDBC/src&apos;&#x0D;&#x0A;- Original element: &apos;session/src/session&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=JDBC/src" element1="/src&lt;session" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1678069893947" version="1.0"/>
+</session>

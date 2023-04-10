@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+</head>
+
+<script>
+    function same(){
+        console.log($('#pas2').val())
+        if($('#pas').val() === $('#pas2').val()){
+            $('#sp').text('일치').css("color", "green")
+        }else $('#sp').text('불일치').css("color", "red")
+    }
+    function next(){
+        if($('#sp').text() === '불일치'){
+            console.log($('#sp').text())
+            $('#pas2').focus()
+        }
+    }
+
+</script>
+<body>
+    <input type="password" id = 'pas' >
+    <input type="password" oninput="same(this)" id = 'pas2'>
+    
+    <span id="sp"></span>
+    <button onclick="next()">화긴</button>
+      
+</body>
+
+</html>

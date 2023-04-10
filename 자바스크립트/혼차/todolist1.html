@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 300px;
+            /* height: 300px; 높이 없애면 자식요소 생기는 만큼 늘어남*/
+            background-color: aqua;
+        }
+        #box{
+            width: 300px;
+            height: 30px;
+            background-color: beige;
+            margin-top: 5px;
+        }
+        #textinput{
+            width: 240px;
+            height: 30px;
+        }
+
+    </style>
+    <script>
+        function myFunc(){
+            var mywrap = document.getElementById("wrap")
+            var textinput = document.getElementById('textinput')
+            var mydiv = document.createElement('div')//원소 생성
+            mydiv.setAttribute("id", "box")
+            mydiv.innerText = textinput.value
+            mywrap.appendChild(mydiv) // 생성한 div를 자식처럼 추가한다.
+            textinput.value = ""
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="textinput">
+    <button onclick="myFunc()">클릭</button>
+    <div id="wrap">
+
+    </div>
+</body>
+</html>

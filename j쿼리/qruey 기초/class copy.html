@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <style>
+        .my-red{
+            color: #0a769f;
+            font-weight: bold; 
+            font-size: 100px;
+        }
+    </style>
+    <script>
+        function myFunc(){
+            $("#box").addClass('my-red')
+        }
+        function myFunc2(){
+            $("#box").removeClass('my-red')
+        }
+        function myFunc3(){
+            var result = $("#box").hasClass('my-red')
+            console.log(result) // boolean 값으로 바환
+        }
+        function myFunc4(){
+            $("#box").toggleClass('my-red')
+            //셋 다 합친 것 있으면 없애고 없으면 추가하고 ;;
+        }
+    </script>
+</head>
+<body>
+    <div id = 'box'> 글자 !</div>
+    <button onclick="myFunc()">콜릭!</button>
+    <button onclick="myFunc2()">제거!</button>
+    <button onclick="myFunc3()">검사!</button>
+    <button onclick="myFunc4()">토글!</button>
+
+
+</body>
+</html>

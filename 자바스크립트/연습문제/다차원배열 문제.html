@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //학생 성적 입력받고 과목 총점, 평균 배열에 넣기
+        var grade = new Array(0)
+        var stuscor = null
+        var stu = prompt("학생 수 입력")
+        var major = prompt("과목 수 입력")
+
+        stu = parseInt(stu)
+        major = parseInt(major)
+
+        for( var i = 0; i  < stu; i++){
+
+            var stuscor = new Array(0)
+            var sum = 0;
+            var avr = 0;
+            for(var j = 0; j < major; j++){        
+
+                var score = prompt((i+1)+ "학생의 점수 입력")
+                score = parseInt(score)
+                stuscor.push(score)
+                sum +=score
+                avr = sum / major
+                document.write(stuscor[j] + " ")
+            }
+            stuscor.push(sum)
+            stuscor.push(avr)
+            document.write(stuscor[major] + " ")
+            document.write(stuscor[major+1] + " ")
+            grade.push(stuscor)
+            stuscor = null
+            document.write("<br>")
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

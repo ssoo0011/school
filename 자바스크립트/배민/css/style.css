@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+*{
+  margin:0;
+  padding:0;
+  font-family: 'KIMM_Bold';
+}
+@font-face {
+  font-family: 'KIMM_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+hr{
+  margin-top: -40px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 1px;
+  background-color: #e2e2e2;
+  border: 0;
+
+}
+
+#wrap{
+  width:600px;
+  height:1200px;
+  background-color: white;
+  margin:0 auto;
+  border-radius: 10px;
+}
+
+#header{
+  width:100%;
+  height:50px;
+  background-color: white;
+  text-align: center;
+  font-size:33px;
+  font-weight: bold;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}
+[type="radio"]:checked {
+  border: 0.7em solid #20dbbf;
+}
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+[type="checkbox"] {
+  vertical-align: middle;
+  /* 기존 체크박스 속성 지우기 */
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 30%;
+  width: 2em;
+  height: 2em;
+}
+[type="checkbox"]:checked {
+  border: 0.7em solid #20dbbf;
+}
+[type="checkbox"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+#menu-img{
+  width:100%;
+  height:375px;
+  background-color: white;
+}
+#menu-img>#name{
+  width: 550px;
+  height: 160px;
+  background-color: white;
+  position: relative;
+  left: 25px;
+  bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+#menu-img>#name>#menu-name{
+  width: 550px;
+  height:60px;
+  background-color: white;
+  border-radius: 10px;
+}
+#menu-img>#name>#menu-con{
+  width: 550px;
+  height: 65px;
+  background-color: white;
+  border-radius: 10px;
+}
+#main-menu-choice{
+  width:100%;
+  height:200px;
+  background-color: white;
+}
+#side-menu-choice{
+  width:100%;
+  height:210px;
+  background-color: white;
+}
+#item-count-change{
+  width:100%;
+  height:200px;
+  background-color: white;
+}
+#item-count{
+  font-size: 20px;
+}

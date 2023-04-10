@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 10000px;
+            height: 45353453px;
+        }
+        #wrap{
+            width: 100px;
+            height: 100px;
+            position: fixed; /* 위치 고정 */ 
+            background-color: palevioletred;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+        $(window).on('scroll',function(){ //스크롤 만들기
+            var sc_top = $(this).scrollTop()
+            var sc_left = $(this).scrollLeft()
+            $('.top').text(sc_top)
+            $('.left').text(sc_left)
+        })
+
+    </script>
+</head>
+<body>
+    <div id = "wrap">
+        <p>scrollTop: <span class="top">0</span>px</p>
+        <p>scrollLeft: <span class="left">0</span>px</p>
+
+
+    </div>
+</body>
+</html>

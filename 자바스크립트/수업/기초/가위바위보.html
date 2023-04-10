@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    var arr = ["가위", "바위", "보"]
+    var com = Math.ceil(Math.random()*3)
+    var c = com-1
+
+
+        //랜덤, 반복문, 조건문, 함수
+        function rcs(choice){
+            alert(choice)
+                
+                var com = Math.ceil(Math.random()*3)
+                document.write(arr[c])
+
+                if((choice == "가위" && arr[c] == "바위")||
+                (choice == "바위" && arr[c] == "보")||
+                (choice == "보" && arr[c] == "가위")){
+                    document.write("졌습니다..", "<br>")
+                }
+                else if(choice == arr[c]){
+                    document.write("비겼습니다.", "<br>")
+                }else{
+                    document.write("이겼습니다.", "<br>")
+                }
+        }
+
+    </script>
+</head>
+<body>
+    <button onClick="rcs('가위')">가위 </button>
+    <button onClick="rcs('바위')">바위</button>
+    <button onClick="rcs('보')"> 보 </button>
+</body>
+</html>

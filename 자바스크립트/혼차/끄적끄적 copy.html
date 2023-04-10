@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./끄적끄적.css" type="text/css">
+
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+</head>
+
+<script>
+
+    var num = 0;
+    function myFunc(){
+
+        var input = document.getElementById("write")
+        var mylist = document.querySelectorAll('#gnb > #lnb')
+        // document.write(input.value)
+        if(mylist.length <= num){
+            alert('저장 개수를 넘었습니다.')
+        }
+        mylist[num].innerText = input.value
+        input.value = ""
+        num+=1
+
+    }
+    function key(e){
+        var input = document.getElementById("write")
+        var mylist = document.querySelectorAll('#gnb > #lnb')
+        // document.write(input.value)
+
+        if(mylist.length <= num){
+            alert('저장 개수를 넘었습니다.')
+        }     
+        if(window.event.keyCode === 13){
+            if(input.value === "" || input.value === " "){
+                alert('내용을 입력하세요')
+            }else{
+                mylist[num].innerText = input.value
+                num += 1
+                input.value = ""
+            }
+       
+        }
+
+    }
+
+
+</script>
+<body>
+    <div id = "wrap">
+        <div id="title">
+            TODO LIST
+        </div>
+        <div id="add">
+            <input type="text" id="write" onkeypress="key(event)" >
+            <button onclick="myFunc()">입력</button>
+        </div>
+        <div id="contents">
+            <ul id = "gnb">
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+                
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+                
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+                
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+                
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+                
+                <div id="todo"><input type = 'checkbox'></div>
+                <li id = "lnb"></li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

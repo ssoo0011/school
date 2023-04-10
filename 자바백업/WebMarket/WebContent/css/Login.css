@@ -1,0 +1,62 @@
+
+.wrap{
+    height: 800px;
+    width: 500px;
+    margin: auto;
+}
+.label{
+	width : 100px;
+}
+
+.input_text{
+  margin-top: 20px ;
+  width: 300px;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+}
+
+button{ 
+    border: none;
+    width: 420px;
+    height: 45px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    background: #FF98A3; 
+    color: #fff; 
+    font-size: 11px;
+    position: relative;
+    margin-top: 10px;
+    right: 10px;
+}
+
+button:hover{
+    cursor: pointer; 
+    background-color: #FFF0F5; 
+    color : #FF98A3;
+    border: 2px solid #FF98A3;
+}
+
+[type="checkbox"] {
+    vertical-align: middle;
+    /* 기존 체크박스 속성 지우기 */
+    appearance: none;
+    border: max(1px, 0.1em) solid gray;
+    border-radius: 30%;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+[type="checkbox"]:checked {
+    border: 0.4em solid #FF98A3;
+}
+
+[type="checkbox"]:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+    cursor: pointer;
+}

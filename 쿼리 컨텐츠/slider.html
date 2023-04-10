@@ -1,0 +1,44 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="./css/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="./js/jquery.bxslider.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+        auto :true, //자동재생
+        pager : false,
+        pause : 2000,
+        speed:300,
+        autoControls:true, //자동재생 제어창
+        mode:'horizontal',//가로
+        //mode:'vertical'//세로
+        // mode : fade 페이드인아웃
+
+      });
+    });
+  </script>
+<style>
+  img{
+    width: 100%;
+    height: 400px;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="slider">
+    <div><img src="./images/img1.jpg"></div>
+    <div><img src="./images/img2.jpg"></div>
+    <div><img src="./images/img3.jpg"></div>
+    <div><img src="./images/img4.jpg"></div>
+    <div><img src="./images/img5.jpg"></div>
+    <div><img src="./images/img6.jpg"></div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+package blog;
+
+public class Programcers {
+
+	public static void main(String[] args) {
+		String []eng = {"zero", "one", "two", "three", "four",
+				"five", "six", "seven", "eight", "nine"};
+		
+	}
+
+}
+ 

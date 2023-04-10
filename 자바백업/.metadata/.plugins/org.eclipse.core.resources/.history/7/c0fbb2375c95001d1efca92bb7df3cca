@@ -1,0 +1,87 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+
+class Location{
+	
+	String city;
+	int sn;//위도
+	int dw;//경도
+	
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public int getSn() {
+		return sn;
+	}
+
+	public void setSn(int sn) {
+		this.sn = sn;
+	}
+
+	public int getDw() {
+		return dw;
+	}
+
+	public void setDw(int dw) {
+		this.dw = dw;
+	}
+
+	public Location(String city, int sn, int dw) {
+		this.city = city;
+		this.sn = sn;
+		this.dw = dw;
+	}
+
+	public static Location get(String str) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String toString() {
+		return  city + "\t" + sn + "\t" + dw;
+	}
+	
+}
+
+
+public class book06 {
+	public static void main(String[] args) {
+		
+		HashMap<String, Location> location = new HashMap<String, Location>(4); //크기가 4
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("도시, 경도, 위도를 입력하세요.");
+		while (true) {
+			System.out.println(">>");
+			
+			String city = scanner.next();
+			
+			int sn = scanner.nextInt();
+			scanner.nextLine();
+			int dw = scanner.nextInt();
+			scanner.nextLine();
+			
+			System.out.println("---------------------------------------");
+			Set<String> key = location.keySet();
+			
+			Iterator<String> keyit = key.iterator();
+			
+			while (keyit.hasNext()) {
+				String str = keyit.next();
+				Location loca = Location.get(str); 
+				System.out.println(str + loca);
+			}
+			
+		}
+		
+	}
+}

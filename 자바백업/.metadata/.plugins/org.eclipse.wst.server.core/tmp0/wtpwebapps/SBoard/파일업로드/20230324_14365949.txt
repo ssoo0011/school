@@ -1,0 +1,19 @@
+-저번시간 내용:
+-jquery 적용
+-$, css, 체이닝, ready, parent ...
+
+-이번시간 내용:
+-prev, next, siblings...
+-...요소 선택자 관련 메서드
+(html+css -> js -> jquery -> react ...) - 4-13까지
+(java -> dbms -> jsp -> spring ...)
+(배운 모든 것을 스프링 프로젝트에 녹여내기...)
+
+HTML+CSS , JS , JQUERY
+-> DBMS -> React -> Node
+-> DBMS -> Java -> JSP -> Spring
+웹개발 환경자체는
+리액트랑 스프링을 많이쓰니까
+Spring  (JSP)
+Spring boot (thymeleaf)
+

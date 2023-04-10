@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc(){
+            var pw = document.getElementById("pw")
+            var pwtype = pw.getAttribute('type')
+            
+            if(pwtype === 'text'){
+                pw.setAttribute('type', 'password')
+                //패스워드를 텍스트타입으로, 글로 나타나다가 ***로 보임
+
+            }else if (pwtype === 'password'){
+                pw.setAttribute('type', 'text')
+                //패스워드를 텍스트타입으로, ***으로 나타나다가 글로 보임
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="id"><br>
+    <input type="password" id="pw"><br>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

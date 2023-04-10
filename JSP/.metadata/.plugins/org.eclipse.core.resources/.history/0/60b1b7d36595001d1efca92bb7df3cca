@@ -1,0 +1,9 @@
+import java.util.HashMap;
+
+public class book7 {
+	public static void main(String[] args) {
+		
+		
+		HashMap<String, double> grade = new HashMap<K, V>();
+	}
+}

@@ -1,0 +1,96 @@
+package fileupload;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import Board.*;
+import com.oreilly.servlet.MultipartRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class FileUtil {
+	
+	HttpServletRequest req;
+	HttpServletResponse resp;
+	
+	public BoardDTO UpFile(HttpServletRequest req) {
+		
+		//폴더 경로
+		String saveDirectory = req.getServletContext().getRealPath("파일업로드");
+		
+		File folder = new File(saveDirectory);
+		
+		int maxPostSize = 1024*1000; //용량
+		String encoding = "UTF-8";
+		String fileName = "";
+		String newFileName = "";
+		BoardDTO dto;
+		
+		try{
+			
+			MultipartRequest mr = new MultipartRequest(req, saveDirectory, 
+			maxPostSize, encoding);
+			
+			fileName = mr.getFilesystemName("ofile");
+			
+			String ext = fileName.substring(fileName.lastIndexOf("."));
+			String now = new SimpleDateFormat("yyyyMMdd_HmsS").format(new Date());
+			newFileName = now + ext; //파일 새로운 이름
+			
+			File oldFile = new File(saveDirectory + File.separator + fileName);
+			File newFile = new File(saveDirectory + File.separator + newFileName);
+			oldFile.renameTo(newFile);
+			
+			String[] cateArray = mr.getParameterValues("cate");
+			StringBuffer cateBuf = new StringBuffer();
+			
+			dto = new BoardDTO();
+			
+			dto.setContent(mr.getParameter("content"));
+			String pass = mr.getParameter("pass");
+			String ofile = mr.getParameter("ofile");
+			String sfile = newFileName;
+			
+			dto.setName(mr.getParameter("name"));
+			dto.setTitle(mr.getParameter("title"));
+			
+			
+			if(cateArray == null){
+				cateBuf.append("선택없ㄷ음");
+				
+			}else{
+				for(String s : cateArray){
+					cateBuf.append(s+ ", ");
+				}
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			req.setAttribute("errorMessage", "파일 업로드 오류");
+			System.out.println("파일 이름 뭐노~!");
+		}
+		
+		return newFileName;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

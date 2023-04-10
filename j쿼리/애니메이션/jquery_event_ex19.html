@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <title>Document</title>
+   <script>
+
+      var list = [
+         ["■","■","■","■","■"],
+         ["□","□","□","□","■"],
+         ["■","□","■","□","■"],
+         ["■","□","□","□","□"],
+         ["■","■","■","■","■"]
+      ];
+      // 내위치
+      var x = 1
+      var y = 0
+      list[x][y] = "★"; 
+      // 내위치
+      $(document).ready(function myVal() {
+         for (let i = 0; i < list.length; i++) {
+         for (let j = 0; j < list[i].length; j++) {
+            $(document).ready(function () {
+               $("body").append(list[i][j]);
+            });
+         }
+         $(document).ready(function () {
+               $("body").append("<br/>");
+            });
+      }
+      });
+
+      $(document).ready(function () {
+         $(document).keydown(function (e) { 
+            var txt = e.keyCode
+            switch (txt) {
+               case 37:
+                  txt = "←";
+                  x--;
+                  break;
+               case 39:
+                  txt = "→";
+                  list[x][y] = "□";
+                  x++;
+                  list[x][y] = "★";
+                  break;
+               case 38:
+                  txt = "↑";
+                  y++;
+                  break;
+               case 40:
+                  txt = "↓";
+                  y--;
+                  break;
+            }
+            $(".txt").val(txt)
+            $(".txt").change(function () { 
+               for (let i = 0; i < list.length; i++) {
+         for (let j = 0; j < list[i].length; j++) {
+            $(document).ready(function () {
+               $("body").append(list[i][j]);
+            });
+         }
+         $(document).ready(function () {
+               $("body").append("<br/>");
+            });
+      }
+               
+            });
+         });
+      });
+
+   </script>
+</head>
+<body>
+   <input type="text" class="txt" value="s"><br>
+</body>
+</html>

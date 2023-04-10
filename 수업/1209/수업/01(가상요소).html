@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+        width: 500px;
+        height: 50px;
+        background-color: aquamarine;
+        padding-top: 5px;
+        padding-left: 12px;
+        box-sizing: border-box;
+        position: relative;
+        left: 50px;
+        top: 50px;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul>li{
+        float: left;
+        margin-right: 20px;
+        position: relative; /*하위요소 기준점 잡아주기.*/
+    }
+    ul>li::before{ /*선 만들기*/
+        content: ''; /*안넣으면 선 안나옴*/
+        display: block;
+        width: 1px;
+        height: 20px;
+        background-color: gray;
+
+        position: absolute; /*부모 기준으로 선 옮기기!*/
+
+    }
+
+    ul>li:first-child::before{/*리스트 첫 번째 자식의 선*/
+        left : 25px;
+        top: 0px;
+    }
+    ul>li:nth-child(2)::before{/*리스트 두 번째 자식의 선*/
+        left : 42px;
+        top: 0px;
+    }
+    ul>li:nth-child(3)::before{/*리스트 세 번째 자식의 선*/
+        left : 75px;
+        top: 0px;
+    }
+    ul>li:last-child::before{/*리스트 마지막 자식의 선*/
+        display : none;
+    }
+
+    ul>li>a{
+        background-color: white;
+        color: gray;
+    }
+
+    ul>li>a:hover{
+        color: white;
+        background-color: palevioletred;
+    }
+
+</style>
+<body>
+    <ul>
+        <li><a href="#">홈</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리</a></li>
+    </ul>
+
+
+</body>
+</html>
+
+
+
+<!-- 가상요소 안 쓰면 태그양이 많아져서 안좋음
+ -->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //학생 n명 성적 받기
+        //맨 뒤에 총점, 평균 넣기
+
+        var arr = []
+        var people = prompt("학생 몇 명?")
+        people = parseInt(people)
+        var sum = 0;
+ 
+        for(var i = 0; i< people; i++){
+            
+            var score = prompt("점수입력")
+            score = parseInt(score)
+            arr.push(score)
+            sum += score 
+        }
+        arr.push(sum)
+        arr.push(sum / people)
+        document.write(arr, "<br>")
+        document.write(`총점은 ${arr[people]}점, 평균은 ${arr[people+1].toFixed(2)}점입니다.`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

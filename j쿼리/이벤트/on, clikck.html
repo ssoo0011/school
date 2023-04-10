@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){
+            $('.btn1').click(function(){
+                $('.btn1').parent().next().css({"color":"pink"})
+            })
+            $('.btn2').on({ //중괄호로 무ㅜㄲ으면 여러개 가나ㅡㅇ
+                "mouseover focus" : function(){
+                    $('.btn2').parent().next().css({"color":"purple"})
+                },
+                "mouseout blur":function(){
+                    $('.btn2').parent().next().css({"color":"skyblue"})
+
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <p>
+    <button class = "btn1">버튼 꾸욱!</button>
+    </p>
+    <p>내용1</p>
+    <p>
+    <button class = "btn2">버튼 꾸욱!</button>
+    </p>
+    <p>내용1</p>
+
+</body>
+</html>

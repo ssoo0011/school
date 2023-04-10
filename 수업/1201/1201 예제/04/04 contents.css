@@ -1,0 +1,27 @@
+
+.con > .img{
+    width: 50px;
+    height: 50px;
+    display: inline - block;
+    margin-top: -30%;
+    margin-left: 73%;
+    margin-bottom: 15%;
+}
+
+.con > .sub{
+    width: 300px;
+    height: 100px;
+    margin-top: 5%;
+    margin-bottom: -20%;
+    text-align: center;
+    font-size : 18px;
+    font-weight: bold;
+    float: left;
+}
+
+.con > .main{
+    width: 300px;
+    height: 50px;
+    margin-top: -10%;
+    color : gray;
+}

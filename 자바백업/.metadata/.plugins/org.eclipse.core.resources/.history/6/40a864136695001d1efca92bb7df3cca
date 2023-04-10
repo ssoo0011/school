@@ -1,0 +1,16 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class book7 {
+	public static void main(String[] args) {
+		
+		
+		HashMap<String, Double> grade = new HashMap<String, Double>(5);
+		
+		System.out.println("미래장학금 관리시스템입니다.");
+		Scanner scanner = new Scanner(System.in);
+		while (true) {
+			String input = scanner.next();
+		}
+	}
+}

@@ -1,0 +1,116 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 5%;
+
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 25px;
+}
+
+li{
+    list-style-type: none;
+    
+}
+a{
+    text-decoration: none;
+}
+
+.change input{
+    accent-color: red;
+}
+
+#wrap{
+    width: 500px;
+    height: 800px;
+    background-color:white;
+    border: 1px solid #e7bab1;
+    border-radius: 15px;
+}
+#title{
+    width: 400px;
+    height: 70px;
+    background-color: yellow;
+    position: relative;
+    top: px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 23px;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+#contents{
+    width: 450px;
+    height: 560px;
+    background-color: palegoldenrod;
+
+}
+#contents>#gnb{
+    width: 430px;
+    height: 550px;
+    background-color: yellow;
+    
+}
+#gnb>#todo{
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    float: left;
+    position: relative;
+    bottom: 12px;
+    padding-left: 7px;
+    padding-top: 6px;
+    box-sizing: border-box;
+}
+#lnb{
+    padding-top: 9px;
+    box-sizing: border-box;
+    width: 370px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: aquamarine;
+    float: left;
+    position: relative;
+    bottom: 12px;
+}
+input[type=checkbox]{
+    zoom: 2;
+    background-color: pink;
+}
+#add{
+    width: 400px;
+    height: 50px;
+    background-color: palevioletred;
+    padding-left: 3px;
+    padding-top: 6px;
+    box-sizing: border-box;
+    
+}
+input[type=text]{
+    padding-top: 5px;
+    width: 340px;
+    height: 30px;
+    position: relative;
+    top: -20px;
+    font-size: 20px;
+}
+button{
+    width: 40px;
+    height: 37px;
+    background-color: palegreen;
+    border: none;
+    position: relative;
+    bottom: 22px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}

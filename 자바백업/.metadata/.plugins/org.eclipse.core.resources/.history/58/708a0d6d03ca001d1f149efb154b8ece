@@ -1,0 +1,54 @@
+package Controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Board.BoardDAO;
+import Board.BoardDTO;
+import fileupload.FileUtil;
+
+@WebServlet("/MVCBoard/write.do")
+public class WriteController extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException{
+			
+		req.setCharacterEncoding("utf-8");
+		
+		BoardDAO dao = new BoardDAO();
+		FileUtil fu = new FileUtil();
+		BoardDTO dto =  fu.UpFile(req);
+		
+		String nameString = dto.getName();
+		
+		dao.writeContent(req, dto);
+		List<BoardDTO> bList = dao.ShowList();
+
+		
+		req.setAttribute("List", bList);
+		req.getRequestDispatcher("/MVCBoard/List.jsp").forward(req,  resp);
+
+		dao.close();
+	}
+	
+	public String al(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException{
+		
+		resp.setCharacterEncoding("utf-8");
+		PrintWriter w = resp.getWriter();
+		w.println("<script type = 'text/javascript>");
+		w.println("alert('글쓰기진입')");
+		w.println("</script>");
+		
+		
+		OutOfMemoryError.flush;
+		
+	}
+}

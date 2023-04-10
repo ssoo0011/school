@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <style>
+      #box{
+         width:100px;
+         height:100px;
+         background-color: red;
+         position: relative;
+      }
+   </style>
+   <title>Document</title>
+   <script>
+      var l = 0;
+      var b = 0;
+
+      $(document).ready(function(){
+         $("#left-move").click(function(){
+            $("#box").animate({"left":"-=100px"})
+            l-=100
+         })
+         $("#right-move").click(function(){
+            $("#box").animate({"left":"+=100px"})
+            r+=100
+         })
+         $("#top-move").click(function(){
+            $("#box").animate({"top":"-=100px"})
+            b-=100
+         })
+         $("#bottom-move").click(function(){
+            $("#box").animate({"top":"+=100px"})
+            t+=100
+         })
+         $("#start-position").click(function(){
+            $("#box").animate({"left" : l-l}).animate({"top":b-b})
+         })
+      })
+   </script>
+</head>
+<body>
+   <button id="left-move">왼쪽</button>
+   <button id="right-move">오른쪽</button>
+   <button id="top-move">위</button>
+   <button id="bottom-move">아래</button>
+   <button id="start-position">시작위치로</button>
+   <div id="box">
+      박스
+   </div>
+</body>
+</html>

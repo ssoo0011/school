@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var audio = new Audio();
+        audio.src = './audio/my_piano1.mp3'
+
+        function start(){
+            alert(audio.duration) //오디오 총 시간 222.26초
+            audio.play() //오디오 실행
+        }
+        function pause(){
+            audio.pause() //오디오 멈추기
+        }
+        function stop(){
+            audio.pause() //오디오 끄기
+            audio.currentTime=0 // 현재 시간을 0으로 돌린다
+         }
+
+         var audioFile = [new Audio('./audio/my_piano1.mp3'),
+         new Audio('./audio/my_piano2.mp3'),
+         new Audio('./audio/my_piano3.mp3'), ]
+    </script>
+</head>
+<body>
+    
+    <button onclick="start()">시작</button>
+    <button onclick="pause()">중지</button>
+    <button onclick="stop()">끄기</button>
+    <button>이전</button>
+    <button>다음</button>
+
+
+</body>
+</html>

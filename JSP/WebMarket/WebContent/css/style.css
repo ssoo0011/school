@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+#wrap{
+	width : 100%;
+	height: 500px;
+}
+
+#all{
+	width : 100%;
+	display : inline-block;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#menu{
+	margin-left : 6%;
+}
+#sale{
+    width: 100%;
+    height: 120%;
+}
+
+.product {
+	width: 33%;
+	height: 33%;
+    float: left;
+    text-align: center;
+    font-size: 13px;
+    padding-top : 10px;
+}
+
+.product:hover{
+	background : #e2e2e2;
+	cursor: pointer;
+}
+.name{
+    font-size: 35px;
+    margin-bottom: 7%;
+
+}
+.price{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom : 12px;
+    
+}
+#infor{
+	width: 70%;
+	height: 400px;
+	margin-left : 30px;
+	float : left;
+}
+#infor > h2{
+	margin-left : 5px;
+	margin-bottom : 30px;
+}
+#infor > p{
+	color : gray;
+	font-size : 12px;
+}
+li{
+	list-style-type: none;
+	position : relative;
+	right : 35px;
+	margin-bottom : 25px;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+.label{
+	width : 100px;
+}
+
+.input_text{
+  width: 300px;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+}
+
+
+

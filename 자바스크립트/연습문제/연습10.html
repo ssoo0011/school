@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var del = confirm("회원 탈퇴할거야?")
+        if(del === true){
+            var id = prompt("아이디")
+            if(id === "1"){
+                var pw = prompt("비번")
+                if(pw === "1"){
+                    document.write("탈퇴 성공")
+                }else{
+                    document.write("비번틀림")
+                }
+            }else{
+                    document.write("아이디틀림")
+            }
+        }else{
+            document.write("종료!")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
